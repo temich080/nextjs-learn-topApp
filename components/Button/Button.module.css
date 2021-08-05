@@ -1,0 +1,19 @@
+.root {
+	box-sizing: border-box;
+	min-width: 148px;
+	height: 35px;
+
+	border-radius: 5px;
+}
+
+.primary {
+	color: var(--white);
+	border: 1px solid var(--white);
+	background: var(--primary);
+}
+
+.secondary {
+	color: var(--black);
+	border: 1px solid #EBEBEB;
+	background: var(--white);
+}
