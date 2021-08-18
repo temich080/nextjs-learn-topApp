@@ -1,6 +1,8 @@
-import {ReactNode} from "react";
+import {ButtonHTMLAttributes, DetailedHTMLProps, ReactNode} from "react";
 
-export interface ButtonProps {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
     type: 'primary' | 'secondary',
     children: ReactNode
 }

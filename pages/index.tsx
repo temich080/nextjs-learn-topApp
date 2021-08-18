@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
                 h3 здесь
             </Htag>
 
-            <Button type={'primary'}>Кнопашка</Button>
+            <Button onClick={()=>null} type={'primary'} className={'dddd'}>Кнопашка</Button>
             <Button type={'secondary'}>Кнопашка2</Button>
 
             <a href={"/about"}>LINK TO ABOUT PAGE</a>
