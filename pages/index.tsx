@@ -2,7 +2,7 @@ import Head from 'next/head';
 import {Htag} from "../components";
 import {Button} from "../components/Button/Button";
 
-export default function Home():JSX.Element {
+export default function Home(): JSX.Element {
     return (
         <div>
             <Head>
