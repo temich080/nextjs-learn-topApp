@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import {Htag} from "../components";
-import {Button} from "../components/Button/Button";
+import {HTag, PTag, Button} from "../components";
 
 export default function Home(): JSX.Element {
     return (
@@ -10,15 +9,27 @@ export default function Home(): JSX.Element {
                 <meta name="description" content="Главная страница проекта" />
             </Head>
 
-            <Htag tag={'h1'}>
+            <HTag tag={'h1'}>
                 Привет, я в Интернете теперь!!!
-            </Htag>
-            <Htag tag={'h2'}>
+            </HTag>
+            <HTag tag={'h2'}>
                 Заголовок h2 тоже работает корректно
-            </Htag>
-            <Htag tag={'h3'}>
+            </HTag>
+            <HTag tag={'h3'}>
                 h3 здесь
-            </Htag>
+            </HTag>
+            <PTag>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores labore nam obcaecati voluptate! Atque commodi consequuntur cupiditate dignissimos dolorum ducimus, eligendi nihil nulla numquam optio quas quasi qui sunt voluptate?
+            </PTag>
+            <PTag size={'small'}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores labore nam obcaecati voluptate! Atque commodi consequuntur cupiditate dignissimos dolorum ducimus, eligendi nihil nulla numquam optio quas quasi qui sunt voluptate?
+            </PTag>
+            <PTag size={'medium'}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores labore nam obcaecati voluptate! Atque commodi consequuntur cupiditate dignissimos dolorum ducimus, eligendi nihil nulla numquam optio quas quasi qui sunt voluptate?
+            </PTag>
+            <PTag size={'large'}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores labore nam obcaecati voluptate! Atque commodi consequuntur cupiditate dignissimos dolorum ducimus, eligendi nihil nulla numquam optio quas quasi qui sunt voluptate?
+            </PTag>
 
             <Button onClick={()=>null} type={'primary'} className={'dddd'}>Кнопашка</Button>
             <Button type={'secondary'}>Кнопашка2</Button>
