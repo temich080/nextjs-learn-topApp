@@ -6,7 +6,6 @@ import {GetStaticProps} from "next";
 import {MenuItem} from '../interfaces/menu.interface';
 
 function Home({menu}: HomeProps): JSX.Element {
-    console.log(menu);
     return (
         <div>
             <Head>
