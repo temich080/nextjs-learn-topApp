@@ -5,7 +5,7 @@ import axios from 'axios';
 import {GetStaticProps} from "next";
 import {MenuItem} from '../interfaces/menu.interface';
 
-function Home({menu}: HomeProps): JSX.Element {
+function Home({menu, firstCategory}: HomeProps): JSX.Element {
     return (
         <div>
             <Head>
@@ -14,9 +14,6 @@ function Home({menu}: HomeProps): JSX.Element {
             </Head>
 
             <>
-                <ul>
-                    {menu.map(m => (<li key={m._id.secondCategory}>{m._id.secondCategory}</li>))}
-                </ul>
                 <HTag tag={'h1'}>
                     Привет, я в Интернете теперь!!!
                 </HTag>
@@ -55,7 +52,7 @@ export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps<HomeProps> =  async () => {
     const firstCategory = 0;
-    const { data: menu } = await axios.post<MenuItem>(`${process.env.NEXT_PUBLIC_DOMAIN}/api/top-page/find`, {
+    const { data: menu } = await axios.post<MenuItem[]>(`${process.env.NEXT_PUBLIC_DOMAIN}/api/top-page/find`, {
         firstCategory
     })
     return {
