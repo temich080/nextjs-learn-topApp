@@ -1,69 +1,82 @@
-.footer {
-	margin: 50px 0 0 0;
-	padding: 25px 32px;
-
-	background: var(--primary);
+.firstLevel {
 	display: grid;
-	grid-template-columns: minmax(320px, 360px) 1fr;
-	grid-template-areas: "copyright links";
 	align-items: center;
-}
 
-.copyright {
-	grid-area: copyright;
-	font-size: 16px;
-	line-height: 22px;
+	margin-top: 20px;
+
+	font-size: 18px;
 	font-weight: 500;
-	color: var(--white);
+	line-height: 25px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
 }
 
-.links {
-	grid-area: links;
-	text-align: end;
+.firstLevelList {
+	padding: 0;
+
+	list-style: none;
 }
 
-.links > a {
-	font-size: 16px;
-	line-height: 22px;
+.firstLevelActive,
+.firstLevel:hover {
+	color: var(--primary);
+}
+
+.firstLevelActive svg,
+.firstLevel:hover svg {
+	fill: var(--primary);
+}
+
+.secondLevel {
+	margin-bottom: 10px;
+	padding: 0;
+
+	cursor: pointer;
+	text-transform: uppercase;
+
+	color: var(--gray-dark);
+	border: none;
+
+	background: none;
+
+	font-size: 12px;
+
+	font-weight: 300;
+}
+
+.secondBlock {
+	margin-top: 15px;
+	margin-left: 12px;
+	padding: 0 0 0 32px;
+
+	list-style: none;
+
+	border-left: 1px solid #DFDFDF;
+}
+
+.secondLevelBlock {
+	overflow: hidden;
+
+	padding: 0;
+
+	list-style: none;
+}
+
+.thirdLevel {
+	display: block;
+
+	margin-bottom: 10px;
+
+	cursor: pointer;
+
+	color: var(--gray-dark);
+	outline-offset: -1px;
+
+	font-size: 14px;
 	font-weight: 500;
-	color: var(--white);
-	padding-right: 40px;
 }
 
-.links > a:last-of-type {
-	padding-right: 0;
-}
-
-@media (min-width: 767px) and (max-width: 1279px) {
-	.links {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-
-	.links a {
-		padding-right: 0;
-	}
-}
-
-@media (max-width: 767px) {
-	.footer {
-		margin: 16px 0 0 0;
-		padding: 25px 16px;
-
-		grid-template-columns: 1fr;
-		gap: 12px 0;
-		grid-template-areas:
-			"links"
-			"copyright";
-	}
-	
-	.links {
-		display: grid;
-		grid-template-columns: 1fr;
-		text-align: start;
-	}
-
-	.links a {
-		padding-right: 0;
-	}
+.thirdLevelActive,
+.thirdLevel:hover {
+	color: var(--primary);
 }
